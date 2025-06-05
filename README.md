@@ -11,7 +11,7 @@ I'm a software engineer passionate about systems-level programming, embedded Lin
 ```rust
 fn main() {
     let languages = vec![
-        ("C", Embedded, drivers, performance"),
+        ("C", "Embedded, drivers, performance"),
         ("C++", "Cross-platform, modern C++ standards"),
         ("Rust", "Memory-safe systems, concurrent programming"),
     ];
