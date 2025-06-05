@@ -11,61 +11,12 @@ I'm a software engineer passionate about systems-level programming, embedded Lin
 ```rust
 fn main() {
     let languages = vec![
-        ("C", "10+ years: Embedded, drivers, performance"),
+        ("C", Embedded, drivers, performance"),
         ("C++", "Cross-platform, modern C++ standards"),
         ("Rust", "Memory-safe systems, concurrent programming"),
     ];
-    
-    // Functional programming with iterators
-    let rust_info = languages.iter()
-        .find(|(lang, _)| *lang == "Rust")
-        .map(|(_, info)| info)
-        .unwrap_or("Not found");
-        
-    println!("Rust experience: {}", rust_info);
-    
-    // Demonstrate more Rust features
-    let lang_count = count_languages(&languages);
-    assert_eq!(lang_count, 3);
 }
 
-// Unit testing
-#[cfg(test)]
-mod tests {
-    use super::*;
-    
-    #[test]
-    fn test_languages_vector() {
-        let languages = vec![
-            ("C", "10+ years: Embedded, drivers, performance"),
-            ("C++", "Cross-platform, modern C++ standards"),
-            ("Rust", "Memory-safe systems, concurrent programming"),
-        ];
-        
-        assert_eq!(languages.len(), 3);
-        assert_eq!(languages[2].0, "Rust");
-    }
-    
-    #[test]
-    fn test_language_lookup() {
-        let languages = vec![
-            ("C", "10+ years: Embedded, drivers, performance"),
-            ("C++", "Cross-platform, modern C++ standards"),
-            ("Rust", "Memory-safe systems, concurrent programming"),
-        ];
-        
-        let rust_info = languages.iter()
-            .find(|(lang, _)| *lang == "Rust")
-            .map(|(_, info)| *info);
-            
-        assert_eq!(rust_info, Some("Memory-safe systems, concurrent programming"));
-    }
-}
-
-// Helper function with generic type
-fn count_languages<T>(languages: &Vec<(T, T)>) -> usize {
-    languages.len()
-}
 ```
 
 ---
