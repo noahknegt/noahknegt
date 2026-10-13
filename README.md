@@ -32,22 +32,6 @@ ansible-playbook --tags "deploy,upgrade" site.yml
 
 ---
 
-### 📦 Podman (Quadlet) Mastery
-
-```ini
-# Rootless container with custom network, isolation, and healthchecks
-[Container]
-Image=custom/ci-build:latest
-Name=ci_build_runner
-Network=podman
-Environment=CI=true
-Volume=%h/build:/build:Z
-HealthCheckCmd=build.sh --health
-Exec=build.sh --target release
-```
-
----
-
 ### 📦 OCI-Compliant Containerfile
 
 ```dockerfile
